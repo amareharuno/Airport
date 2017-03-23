@@ -1,32 +1,27 @@
 package netcraker.bsuir.eremeeva.airport.entities;
 
+import netcraker.bsuir.eremeeva.airport.entities.Airplanes.AbstractAirplane;
+
 import java.util.ArrayList;
 
 public class Airline {
     private String name;
-    private short foundationYear;
+    private int foundationYear;
     private String codeICAO;
     private String address;
-
-    private ArrayList<Airplane> airplanes = new ArrayList<>();
     private int totalCapacity = 0;
     private int totalCarryingCapacity = 0;
 
-    private Airline() {
-    }
+    private ArrayList<AbstractAirplane> airplanes = new ArrayList<>();
 
-    public Airline(String name, String codeICAO) {
+    public Airline(String name, int foundationYear, String codeICAO) {
         this.name = name;
+        this.foundationYear = foundationYear;
         this.codeICAO = codeICAO;
+        this.address = "address not set";
     }
 
-    public Airline(String name, String codeICAO, String address) {
-        this.name = name;
-        this.codeICAO = codeICAO;
-        this.address = address;
-    }
-
-    public Airline(String name, short foundationYear, String codeICAO, String address) {
+    public Airline(String name, int foundationYear, String codeICAO, String address) {
         this.name = name;
         this.foundationYear = foundationYear;
         this.codeICAO = codeICAO;
@@ -41,11 +36,11 @@ public class Airline {
         this.name = name;
     }
 
-    public short getFoundationYear() {
+    public int getFoundationYear() {
         return foundationYear;
     }
 
-    public void setFoundationYear(short foundationYear) {
+    public void setFoundationYear(int foundationYear) {
         this.foundationYear = foundationYear;
     }
 
@@ -66,16 +61,10 @@ public class Airline {
     }
 
     public int getTotalCapacity() {
-        if (airplanes.isEmpty()) {
-            System.out.println("В авиакомпании нет ни одного самолета.");
-        }
         return totalCapacity;
     }
 
     public int getTotalCarryingCapacity() {
-        if (airplanes.isEmpty()) {
-            System.out.println("В авиакомпании нет ни одного самолета.");
-        }
         return totalCarryingCapacity;
     }
 
@@ -83,14 +72,11 @@ public class Airline {
         return airplanes.size();
     }
 
-    public ArrayList<Airplane> getAirplanes() {
-        if (airplanes.isEmpty()) {
-            System.out.println("Внимание, в авиакомпании нет самолетов!");
-        }
+    public ArrayList<AbstractAirplane> getAirplanes() {
         return airplanes;
     }
 
-    public void setAirplanes(ArrayList<Airplane> airplanes) {
+    public void setAirplanes(ArrayList<AbstractAirplane> airplanes) {
         this.airplanes = airplanes;
     }
 
@@ -103,7 +89,33 @@ public class Airline {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Airline airline = (Airline) o;
+
+        if (foundationYear != airline.foundationYear) return false;
+        if (!name.equals(airline.name)) return false;
+        if (!codeICAO.equals(airline.codeICAO)) return false;
+        return address.equals(airline.address);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + foundationYear;
+        result = 31 * result + codeICAO.hashCode();
+        result = 31 * result + address.hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
-        return super.toString();
+        return "Airline: " +
+                name + " | " +
+                "codeICAO='" + codeICAO +
+                ", foundationYear = " + foundationYear +
+                ", address='" + address;
     }
 }

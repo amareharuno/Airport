@@ -1,22 +1,19 @@
 package netcraker.bsuir.eremeeva.airport.tools;
 
 import netcraker.bsuir.eremeeva.airport.entities.Airline;
-import netcraker.bsuir.eremeeva.airport.entities.Airplane;
+import netcraker.bsuir.eremeeva.airport.entities.Airplanes.AbstractAirplane;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class AirlineManagementTool {
 
-    final private static Comparator<Airplane> compareByFlightRange = new Comparator<Airplane>() {
-        @Override
-        public int compare(Airplane o1, Airplane o2) {
-            return o1.getFlightRange() - o2.getFlightRange();
-        }
-    };
+    private static final Comparator<AbstractAirplane> compareByFlightRange
+            = Comparator.comparingInt(AbstractAirplane::getFlightRange);
 
-    public static void addAirplane(Airplane airplane, Airline airline){
-        ArrayList<Airplane> airplanes = airline.getAirplanes();
+    public static void addAirplane(AbstractAirplane airplane, Airline airline){
+        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
+
         int totalCapacity = airline.getTotalCapacity();
         int totalCarryingCapacity = airline.getTotalCarryingCapacity();
 
@@ -30,15 +27,15 @@ public class AirlineManagementTool {
         airline.setTotalCarryingCapacity(totalCarryingCapacity);
     }
 
-    public static void removeAirplane(Airplane airplane, Airline airline) {
-        ArrayList<Airplane> airplanes = airline.getAirplanes();
+    public static void removeAirplane(AbstractAirplane airplane, Airline airline) {
+        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
 
         if (airplanes.isEmpty()) {
             System.out.println("В компании и так нет ни одного самолета.");
         }
         else {
-            for (Airplane model : airplanes) {
-                if (model.getId() == airplane.getId()) {
+            for (AbstractAirplane model : airplanes) {
+                if (model.getIdAirplane() == airplane.getIdAirplane()) {
                     int totalCapacity = airline.getTotalCapacity();
                     int totalCarryingCapacity = airline.getTotalCarryingCapacity();
 
@@ -55,7 +52,7 @@ public class AirlineManagementTool {
             airline.setAirplanes(airplanes);
         }
     }
-    public static ArrayList<Airplane> sortAirplanesByFlightRange(ArrayList<Airplane> airplanes){
+    public static ArrayList<AbstractAirplane> sortAirplanesByFlightRange(ArrayList<AbstractAirplane> airplanes){
         if (airplanes.isEmpty()) {
             System.out.println("В авиакомпании нет ни одного самолета");
             return null;
@@ -70,20 +67,19 @@ public class AirlineManagementTool {
      * выводит все самолеты авиакомпании
      */
     public static void printAirplanesList(Airline airline){
-        ArrayList<Airplane> airplanes = airline.getAirplanes();
-        for (Airplane airplane : airplanes) {
-            System.out.println(airplane); // переопределить toString
+        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
+        for (AbstractAirplane airplane : airplanes) {
+            System.out.println(airplane);
         }
     }
 
-    public void findAirplaneByFuelConsumption(int fromValue, int toValue, ArrayList<Airplane> airplanes){
+    public static void findAirplaneByFuelConsumption(int fromValue, int toValue, ArrayList<AbstractAirplane> airplanes){
         if (airplanes.isEmpty()) {
             System.out.println("В авиакомпании нет ни одного самолета");
-            return;
         }
         else {
-            short foundAirplanesCount = 0;
-            for (Airplane airplaneModel : airplanes) {
+            int foundAirplanesCount = 0;
+            for (AbstractAirplane airplaneModel : airplanes) {
                 if (airplaneModel.getFuelConsumption() >= fromValue && airplaneModel.getFuelConsumption() <= toValue) {
                     System.out.println(airplaneModel);
                     foundAirplanesCount++;
@@ -93,13 +89,4 @@ public class AirlineManagementTool {
         }
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
 }
