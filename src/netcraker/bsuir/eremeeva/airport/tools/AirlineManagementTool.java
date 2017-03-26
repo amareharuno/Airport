@@ -8,9 +8,66 @@ import java.util.Comparator;
 import java.util.List;
 
 public class AirlineManagementTool {
-
+    
     private static final Comparator<Airplane> compareByFlightRange
             = Comparator.comparingInt(Airplane::getFlightRange);
+
+    private static ArrayList<Airline> airlines;
+
+    public static ArrayList<Airline> getAirlines() {
+        return airlines;
+    }
+
+    public static void setAirlines(ArrayList<Airline> airlines) {
+        AirlineManagementTool.airlines = airlines;
+    }
+
+    /**
+     * Добавление авиакомпании
+     * @param airline - авиакомпания
+     */
+    public static void addAirline(Airline airline) {
+        ArrayList<Airline> airlines = getAirlines();
+        airlines.add(airline);
+        setAirlines(airlines);
+    }
+
+    /**
+     * Удаление авиакомпании
+     * @param airline - авиакомпания
+     */
+    public static void removeAirline(Airline airline) {
+        ArrayList<Airline> airlines = getAirlines();
+        
+        if (airlines.isEmpty()) {
+            System.out.println(ConstantStrings.NO_AIRLINES_REGISTERED);
+        }
+        else {
+            for (Airline company : airlines) {
+                if (company.equals(airline)) {
+                    airlines.remove(airline);
+                }
+            }
+
+            setAirlines(airlines);
+        }
+    }
+
+    /**
+     * Вывод всех авиакомпаний
+     */
+    public static void printAirlines() {
+        ArrayList<Airline> airlines = getAirlines();
+
+        if (airlines == null) {
+            System.out.println(ConstantStrings.NO_AIRLINES_REGISTERED);
+        }
+        else {
+            for (Airline airline : airlines) {
+                System.out.println(airline);
+            }
+        }
+    }
 
     /**
      * Добавление самолета в авиакомпанию
@@ -44,11 +101,11 @@ public class AirlineManagementTool {
         ArrayList<Airplane> airplanes = airline.getAirplanes();
 
         if (airplanes.isEmpty()) {
-            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
+            System.out.println(ConstantStrings.NO_AIRPLANE_MESSAGE);
         }
         else {
             for (Airplane model : airplanes) {
-                if (model.getIdAirplane() == airplane.getIdAirplane()) {
+                if (model.equals(airplane)) {
                     int totalCapacity = airline.getTotalCapacity();
                     int totalCarryingCapacity = airline.getTotalCarryingCapacity();
 
@@ -73,7 +130,7 @@ public class AirlineManagementTool {
      */
     public static List<Airplane> sortAirplanesByFlightRange(List<Airplane> airplanes){
         if (airplanes.isEmpty()) {
-            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
+            System.out.println(ConstantStrings.NO_AIRPLANE_MESSAGE);
             return null;
         }
         else {
@@ -90,7 +147,7 @@ public class AirlineManagementTool {
 
         ArrayList<Airplane> airplanes = airline.getAirplanes();
         if (airplanes.isEmpty()){
-            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
+            System.out.println(ConstantStrings.NO_AIRPLANE_MESSAGE);
         }
         else {
             for (Airplane airplane : airplanes) {
@@ -108,7 +165,7 @@ public class AirlineManagementTool {
     public static void findAirplaneByFuelConsumption(int fromValue, int toValue, Airline airline){
         ArrayList<Airplane> airplanes = airline.getAirplanes();
         if (airplanes.isEmpty()) {
-            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
+            System.out.println(ConstantStrings.NO_AIRPLANE_MESSAGE);
         }
         else {
             int foundAirplanesCount = 0;
@@ -117,7 +174,7 @@ public class AirlineManagementTool {
                     System.out.println(airplaneModel);
                     foundAirplanesCount++;
                 }
-                if (foundAirplanesCount == 0) System.out.println(MessageStrings.NO_AIRPLANES_IN_THIS_RANGE);
+                if (foundAirplanesCount == 0) System.out.println(ConstantStrings.NO_AIRPLANES_IN_THIS_RANGE);
             }
         }
     }

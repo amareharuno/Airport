@@ -18,7 +18,7 @@ public class AirplaneManagementTool {
 
         for (Employee person : employees) {
             if (person.equals(employee)) {
-                System.out.println(MessageStrings.EMPLOYEE_ON_BOARD);
+                System.out.println(ConstantStrings.EMPLOYEE_ON_BOARD);
                 return;
             }
         }
@@ -37,7 +37,7 @@ public class AirplaneManagementTool {
         ArrayList<Employee> employees = airplane.getAirplaneEmployeeList();
 
         if (employees.isEmpty()) {
-            System.out.println(MessageStrings.NO_EMPLOYEE_MESSAGE);
+            System.out.println(ConstantStrings.NO_EMPLOYEE_MESSAGE);
         }
         else {
             for (Employee person : employees) {

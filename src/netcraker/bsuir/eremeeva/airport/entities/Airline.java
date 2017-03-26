@@ -1,6 +1,7 @@
 package netcraker.bsuir.eremeeva.airport.entities;
 
 import netcraker.bsuir.eremeeva.airport.entities.airplanes.Airplane;
+import netcraker.bsuir.eremeeva.airport.tools.AirlineManagementTool;
 
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ public class Airline {
 
     private ArrayList<Airplane> airplanes = new ArrayList<>(); // Список самолетов авиакомпании
 
-    protected Airline() {
+    private Airline() {
     }
 
     public Airline(String name, int foundationYear, String codeICAO) {
