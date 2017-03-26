@@ -1,18 +1,21 @@
 package netcraker.bsuir.eremeeva.airport.entities;
 
-import netcraker.bsuir.eremeeva.airport.entities.Airplanes.AbstractAirplane;
+import netcraker.bsuir.eremeeva.airport.entities.airplanes.Airplane;
 
 import java.util.ArrayList;
 
 public class Airline {
-    private String name;
-    private int foundationYear;
+    private String name; // Название компании
+    private int foundationYear; // Год основания
     private String codeICAO;
     private String address;
-    private int totalCapacity = 0;
-    private int totalCarryingCapacity = 0;
+    private int totalCapacity = 0; // Общая вместимость (вместимость всех самолетов авиакомпании)
+    private int totalCarryingCapacity = 0; // Общая грузоподъемность (всех самолетов авиакомпании)
 
-    private ArrayList<AbstractAirplane> airplanes = new ArrayList<>();
+    private ArrayList<Airplane> airplanes = new ArrayList<>(); // Список самолетов авиакомпании
+
+    protected Airline() {
+    }
 
     public Airline(String name, int foundationYear, String codeICAO) {
         this.name = name;
@@ -72,11 +75,11 @@ public class Airline {
         return airplanes.size();
     }
 
-    public ArrayList<AbstractAirplane> getAirplanes() {
+    public ArrayList<Airplane> getAirplanes() {
         return airplanes;
     }
 
-    public void setAirplanes(ArrayList<AbstractAirplane> airplanes) {
+    public void setAirplanes(ArrayList<Airplane> airplanes) {
         this.airplanes = airplanes;
     }
 
@@ -88,6 +91,7 @@ public class Airline {
         this.totalCarryingCapacity = totalCarryingCapacity;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -95,10 +99,10 @@ public class Airline {
 
         Airline airline = (Airline) o;
 
-        if (foundationYear != airline.foundationYear) return false;
-        if (!name.equals(airline.name)) return false;
-        if (!codeICAO.equals(airline.codeICAO)) return false;
-        return address.equals(airline.address);
+        return foundationYear == airline.foundationYear
+                && name.equals(airline.name)
+                && codeICAO.equals(airline.codeICAO)
+                && address.equals(airline.address);
     }
 
     @Override

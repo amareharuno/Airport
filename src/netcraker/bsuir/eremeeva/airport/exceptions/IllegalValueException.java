@@ -1,4 +1,4 @@
-package netcraker.bsuir.eremeeva.airport.Exceptions;
+package netcraker.bsuir.eremeeva.airport.exceptions;
 
 public class IllegalValueException extends Exception{
 

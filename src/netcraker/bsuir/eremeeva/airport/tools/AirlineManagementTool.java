@@ -1,18 +1,24 @@
 package netcraker.bsuir.eremeeva.airport.tools;
 
 import netcraker.bsuir.eremeeva.airport.entities.Airline;
-import netcraker.bsuir.eremeeva.airport.entities.Airplanes.AbstractAirplane;
+import netcraker.bsuir.eremeeva.airport.entities.airplanes.Airplane;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class AirlineManagementTool {
 
-    private static final Comparator<AbstractAirplane> compareByFlightRange
-            = Comparator.comparingInt(AbstractAirplane::getFlightRange);
+    private static final Comparator<Airplane> compareByFlightRange
+            = Comparator.comparingInt(Airplane::getFlightRange);
 
-    public static void addAirplane(AbstractAirplane airplane, Airline airline){
-        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
+    /**
+     * Добавление самолета в авиакомпанию
+     * @param airplane - самолет
+     * @param airline - целевая авиакомпания
+     */
+    public static void addAirplane(Airplane airplane, Airline airline){
+        ArrayList<Airplane> airplanes = airline.getAirplanes();
 
         int totalCapacity = airline.getTotalCapacity();
         int totalCarryingCapacity = airline.getTotalCarryingCapacity();
@@ -25,16 +31,23 @@ public class AirlineManagementTool {
 
         totalCarryingCapacity += airplane.getCarryingCapacity();
         airline.setTotalCarryingCapacity(totalCarryingCapacity);
+
+        airplane.setAirline(airline);
     }
 
-    public static void removeAirplane(AbstractAirplane airplane, Airline airline) {
-        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
+    /**
+     * Удаление самолета из авиакомпании
+     * @param airplane - удаляемый самолет
+     * @param airline - целевая авиакомпания
+     */
+    public static void removeAirplane(Airplane airplane, Airline airline) {
+        ArrayList<Airplane> airplanes = airline.getAirplanes();
 
         if (airplanes.isEmpty()) {
-            System.out.println("В компании и так нет ни одного самолета.");
+            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
         }
         else {
-            for (AbstractAirplane model : airplanes) {
+            for (Airplane model : airplanes) {
                 if (model.getIdAirplane() == airplane.getIdAirplane()) {
                     int totalCapacity = airline.getTotalCapacity();
                     int totalCarryingCapacity = airline.getTotalCarryingCapacity();
@@ -52,9 +65,15 @@ public class AirlineManagementTool {
             airline.setAirplanes(airplanes);
         }
     }
-    public static ArrayList<AbstractAirplane> sortAirplanesByFlightRange(ArrayList<AbstractAirplane> airplanes){
+
+    /**
+     * Сортировка самолетов по дальности полета
+     * @param airplanes - список самолетов
+     * @return - отсортированный по дальности полета список самолетов
+     */
+    public static List<Airplane> sortAirplanesByFlightRange(List<Airplane> airplanes){
         if (airplanes.isEmpty()) {
-            System.out.println("В авиакомпании нет ни одного самолета");
+            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
             return null;
         }
         else {
@@ -64,27 +83,41 @@ public class AirlineManagementTool {
     }
 
     /**
-     * выводит все самолеты авиакомпании
+     * Выводит все самолеты авиакомпании
+     * @param airline - авиакомпания
      */
-    public static void printAirplanesList(Airline airline){
-        ArrayList<AbstractAirplane> airplanes = airline.getAirplanes();
-        for (AbstractAirplane airplane : airplanes) {
-            System.out.println(airplane);
+    public static void printAirplanesList(Airline airline) {
+
+        ArrayList<Airplane> airplanes = airline.getAirplanes();
+        if (airplanes.isEmpty()){
+            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
+        }
+        else {
+            for (Airplane airplane : airplanes) {
+                System.out.println(airplane);
+            }
         }
     }
 
-    public static void findAirplaneByFuelConsumption(int fromValue, int toValue, ArrayList<AbstractAirplane> airplanes){
+    /**
+     * Нахождение самолетов в заданном диапазоне потребления топлива.
+     * @param fromValue - начальное значение диапазона
+     * @param toValue - конечное значение
+     * @param airline - авиакомпания, в которой выполняется поиск
+     */
+    public static void findAirplaneByFuelConsumption(int fromValue, int toValue, Airline airline){
+        ArrayList<Airplane> airplanes = airline.getAirplanes();
         if (airplanes.isEmpty()) {
-            System.out.println("В авиакомпании нет ни одного самолета");
+            System.out.println(MessageStrings.NO_AIRPLANE_MESSAGE);
         }
         else {
             int foundAirplanesCount = 0;
-            for (AbstractAirplane airplaneModel : airplanes) {
+            for (Airplane airplaneModel : airplanes) {
                 if (airplaneModel.getFuelConsumption() >= fromValue && airplaneModel.getFuelConsumption() <= toValue) {
                     System.out.println(airplaneModel);
                     foundAirplanesCount++;
                 }
-                if (foundAirplanesCount == 0) System.out.println("Нет ни одного самолета в заданном диапазоне.");
+                if (foundAirplanesCount == 0) System.out.println(MessageStrings.NO_AIRPLANES_IN_THIS_RANGE);
             }
         }
     }

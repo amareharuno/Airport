@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cae96d82-334e-46f3-90b8-e8f180f43888" name="Default" comment="">
+    <list default="true" id="cae96d82-334e-46f3-90b8-e8f180f43888" name="Default" comment="26.03.2017&#10;Исправления:&#10;1. Убран оверхед из конструкторов,геттеров/сеттеров (исключения и проверки)&#10;2. Добавлены описания методов&#10;3. Создан класс MessageStrings cо строками для вывода сообщений.&#10;4. Исправлены названия пакетов по JCC&#10;5. ArrayList -&gt; List  (public static List&lt;Airplane&gt; sortAirplanesByFlightRange(List&lt;Airplane&gt; airplanes))&#10;&#10;Сделать:&#10;1. Инициализация сущностей&#10;2. Меню&#10;3. Добавить работу с файлами">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AirportProject/netcraker/bsuir/eremeeva/airport/AirportMain.class" afterPath="$PROJECT_DIR$/out/production/AirportProject/netcraker/bsuir/eremeeva/airport/AirportMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/enums/TypeOfService.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/enums/TypeOfService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/Exceptions/IllegalValueException.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/exceptions/IllegalValueException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/CargoAirplane.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/CargoAirplane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/PassangerAirplane.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/PassangerAirplane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/AirMechanic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Pilot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java" afterPath="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Steward.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,24 +32,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AirportMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java">
+      <file leaf-file-name="AirlineManagementTool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="1292">
+              <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeOfService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/enums/TypeOfService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -43,8 +47,8 @@
       <file leaf-file-name="Airline.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+            <state relative-caret-position="161">
+              <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AirlineManagementTool.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java">
+      <file leaf-file-name="Airplane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,14 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractAirplane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java">
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" column="77" lean-forward="false" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,22 +113,24 @@
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/PassangerAirplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/CargoAirplane.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Employee.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/exceptions/IlligalArgumentException.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/Airplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/Exceptions/IllegalArgumentException.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/PassangerAirplane.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/CargoAirplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/Exceptions/IllegalValueException.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java" />
-        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/enums/TypeOfService.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/Airplane.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/PassangerAirplane.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/CargoAirplane.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/MessageStrings.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Employee.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java" />
+        <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java" />
         <option value="$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java" />
       </list>
     </option>
@@ -160,6 +164,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,7 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
+              <option name="myItemId" value="exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Employees" />
+              <option name="myItemId" value="employees" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,13 +331,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Airplanes" />
+              <option name="myItemId" value="airplanes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -785,7 +789,10 @@
       <workItem from="1490266454328" duration="4000" />
       <workItem from="1490266512378" duration="4459000" />
       <workItem from="1490272083258" duration="7907000" />
-      <workItem from="1490281845573" duration="1718000" />
+      <workItem from="1490281845573" duration="1874000" />
+      <workItem from="1490346180938" duration="9000" />
+      <workItem from="1490475148572" duration="713000" />
+      <workItem from="1490534168361" duration="6277000" />
     </task>
     <task id="LOCAL-00001" summary="23.03.17 commit">
       <created>1490283340504</created>
@@ -805,35 +812,35 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60567000" />
+    <option name="totallyTimeSpent" value="67722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="780" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16716418" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16692427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24116744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23432836" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20782208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21825397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -883,7 +890,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="23.03.17 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.03.17 commit" />
+    <MESSAGE value="26.03.2017&#10;Исправления:&#10;1. Убран оверхед из конструкторов,геттеров/сеттеров (исключения и проверки)&#10;2. Добавлены описания методов&#10;3. Создан класс MessageStrings cо строками для вывода сообщений.&#10;4. Исправлены названия пакетов по JCC&#10;5. ArrayList -&gt; List  (public static List&lt;Airplane&gt; sortAirplanesByFlightRange(List&lt;Airplane&gt; airplanes))&#10;&#10;Сделать:&#10;1. Инициализация сущностей&#10;2. Меню&#10;3. Добавить работу с файлами" />
+    <option name="LAST_COMMIT_MESSAGE" value="26.03.2017&#10;Исправления:&#10;1. Убран оверхед из конструкторов,геттеров/сеттеров (исключения и проверки)&#10;2. Добавлены описания методов&#10;3. Создан класс MessageStrings cо строками для вывода сообщений.&#10;4. Исправлены названия пакетов по JCC&#10;5. ArrayList -&gt; List  (public static List&lt;Airplane&gt; sortAirplanesByFlightRange(List&lt;Airplane&gt; airplanes))&#10;&#10;Сделать:&#10;1. Инициализация сущностей&#10;2. Меню&#10;3. Добавить работу с файлами" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -894,26 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -928,9 +916,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -941,28 +927,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Pilot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Steward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/AirMechanic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -973,9 +959,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,28 +970,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Pilot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Steward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/AirMechanic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1018,48 +1002,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/PassangerAirplane.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/PassangerAirplane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/CargoAirplane.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/CargoAirplane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Steward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Pilot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/AirMechanic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
@@ -1073,7 +1055,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
@@ -1089,16 +1071,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1107,13 +1079,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1129,16 +1099,6 @@
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
-            <element signature="e#1636#1637#0" expanded="true" />
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1147,9 +1107,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,51 +1120,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Object.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Comparator.java" />
     <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/exceptions/IlligalArgumentException.java" />
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AirMechanic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Steward.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding>
-            <element signature="e#165#166#0" expanded="false" />
-            <element signature="e#207#208#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/Exceptions/IllegalValueException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/PassangerAirplane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/Pilot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Java/jdk1.8.0_101/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1214,62 +1127,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/CargoAirplane.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/CargoAirplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/PassangerAirplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Steward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Employees/AbstractEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="59" column="27" lean-forward="false" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airplanes/AbstractAirplane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="77" lean-forward="false" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#157#158#0" expanded="false" />
+            <element signature="e#199#200#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/AirportMain.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/AirMechanic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Pilot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#195#196#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/enums/TypeOfService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java">
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/exceptions/IllegalValueException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        <state relative-caret-position="102">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/MessageStrings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="83" lean-forward="false" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirplaneManagementTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="62" lean-forward="false" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1278,11 +1216,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/tools/AirlineManagementTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+        <state relative-caret-position="1292">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/Airline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/airplanes/Airplane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/netcraker/bsuir/eremeeva/airport/entities/employees/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

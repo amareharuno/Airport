@@ -1,34 +1,46 @@
 package netcraker.bsuir.eremeeva.airport.tools;
 
-import netcraker.bsuir.eremeeva.airport.entities.Airplanes.AbstractAirplane;
-import netcraker.bsuir.eremeeva.airport.entities.Employees.AbstractEmployee;
+import netcraker.bsuir.eremeeva.airport.entities.airplanes.Airplane;
+import netcraker.bsuir.eremeeva.airport.entities.employees.Employee;
 
 import java.util.ArrayList;
 
 public class AirplaneManagementTool {
 
-    public static void addEmployee(AbstractEmployee employee, AbstractAirplane airplane){
-        ArrayList<AbstractEmployee> employees = airplane.getAirplaneEmployeeList();
+    /**
+     * Добавление сотрудников в персонал самолета.
+     * @param employee - сотрудник
+     * @param airplane - целевой самолет
+     */
+    public static void addEmployee(Employee employee, Airplane airplane) {
 
-        for (AbstractEmployee person : employees) {
+        ArrayList<Employee> employees = airplane.getAirplaneEmployeeList();
+
+        for (Employee person : employees) {
             if (person.equals(employee)) {
-                System.out.println("Этот сотрудник и так уже в составе персонала самолета.");
+                System.out.println(MessageStrings.EMPLOYEE_ON_BOARD);
                 return;
             }
         }
         employees.add(employee);
+        employee.setAirplane(airplane);
         airplane.setAirplaneEmployeeList(employees);
     }
 
-    public static void removeEmployee(AbstractEmployee employee, AbstractAirplane airplane) {
+    /**
+     * Удаление сотрудника из персонала самолета
+     * @param employee - сотрудник
+     * @param airplane - целевой самолет
+     */
+    public static void removeEmployee(Employee employee, Airplane airplane) {
 
-        ArrayList<AbstractEmployee> employees = airplane.getAirplaneEmployeeList();
+        ArrayList<Employee> employees = airplane.getAirplaneEmployeeList();
 
         if (employees.isEmpty()) {
-            System.out.println("Персонал самолета еще не установлен.");
+            System.out.println(MessageStrings.NO_EMPLOYEE_MESSAGE);
         }
         else {
-            for (AbstractEmployee person : employees) {
+            for (Employee person : employees) {
                 if (person.getId() == employee.getId()) {
                     employees.remove(employee);
                 }
@@ -38,9 +50,14 @@ public class AirplaneManagementTool {
         }
     }
 
-    public static void printAirplaneStuff (AbstractAirplane airplane){
-        ArrayList<AbstractEmployee> employees = airplane.getAirplaneEmployeeList();
-        for (AbstractEmployee employee : employees) {
+    /**
+     * Вывод списка сотрудников самолета
+     * @param airplane - целевой самолет
+     */
+    public static void printAirplaneStuff (Airplane airplane) {
+
+        ArrayList<Employee> employees = airplane.getAirplaneEmployeeList();
+        for (Employee employee : employees) {
             System.out.println(employee);
         }
     }

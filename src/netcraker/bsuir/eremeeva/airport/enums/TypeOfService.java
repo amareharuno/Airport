@@ -1,5 +1,5 @@
 package netcraker.bsuir.eremeeva.airport.enums;
 
-public enum  TypeOfService {
+public enum TypeOfService {
     ECO, BUSINESS, ALL
 }

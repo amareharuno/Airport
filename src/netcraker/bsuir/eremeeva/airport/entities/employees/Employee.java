@@ -1,13 +1,18 @@
-package netcraker.bsuir.eremeeva.airport.entities.Employees;
+package netcraker.bsuir.eremeeva.airport.entities.employees;
 
-public abstract class AbstractEmployee {
+import netcraker.bsuir.eremeeva.airport.entities.airplanes.Airplane;
+
+public abstract class Employee {
     private String firstName;
     private String lastName;
     private static int incrementa = 0;
     private int id;
+    private Airplane airplane; // Самолет, в котором работает сотрудник
 
+    private Employee() {
+    }
 
-    protected AbstractEmployee(String firstName, String lastName) {
+    protected Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = incrementa++;
@@ -33,16 +38,22 @@ public abstract class AbstractEmployee {
         return id;
     }
 
+    public Airplane getAirplane() {
+        return airplane;
+    }
+
+    public void setAirplane(Airplane airplane) {
+        this.airplane = airplane;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AbstractEmployee that = (AbstractEmployee) o;
+        Employee that = (Employee) o;
 
-        if (id != that.id) return false;
-        if (!firstName.equals(that.firstName)) return false;
-        return lastName.equals(that.lastName);
+        return id == that.id && firstName.equals(that.firstName) && lastName.equals(that.lastName);
     }
 
     @Override
