@@ -2,10 +2,10 @@ package netcraker.bsuir.eremeeva.airport.entities.airplanes;
 
 import netcraker.bsuir.eremeeva.airport.enums.TypeOfService;
 
-public class PassangerAirplane extends Airplane {
+public class PassengerAirplane extends Airplane {
     private TypeOfService typeOfService;
 
-    public PassangerAirplane(String name, int capacity, int carryingCapacity, int fuelConsumption,
+    public PassengerAirplane(String name, int capacity, int carryingCapacity, int fuelConsumption,
                              int flightRange, int maxSpeed, TypeOfService typeOfService) {
 
         super(name, capacity, carryingCapacity, fuelConsumption, flightRange, maxSpeed);

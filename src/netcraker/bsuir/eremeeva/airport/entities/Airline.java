@@ -18,12 +18,14 @@ public class Airline {
     private Airline() {
     }
 
+    /*
     public Airline(String name, int foundationYear, String codeICAO) {
         this.name = name;
         this.foundationYear = foundationYear;
         this.codeICAO = codeICAO;
         this.address = "address not set";
     }
+    */
 
     public Airline(String name, int foundationYear, String codeICAO, String address) {
         this.name = name;
@@ -117,10 +119,9 @@ public class Airline {
 
     @Override
     public String toString() {
-        return "Airline: " +
-                name + " | " +
-                "codeICAO='" + codeICAO +
+        return "Airline " + name +
+                ": codeICAO = " + codeICAO +
                 ", foundationYear = " + foundationYear +
-                ", address='" + address;
+                ", address = " + address;
     }
 }
