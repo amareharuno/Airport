@@ -132,8 +132,9 @@ public abstract class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane" +  idAirplane +
-                " " + name + ": capacity = " + capacity +
+        return "Airplane " + name +
+                "(id " + idAirplane +
+                ") : capacity = " + capacity +
                 ", carrying capacity = " + carryingCapacity +
                 ", flight range = " + flightRange +
                 ", fuel consumption = " + fuelConsumption;

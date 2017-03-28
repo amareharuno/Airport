@@ -36,7 +36,7 @@ public class InputVerification {
     public static String checkInputString(String preInputMessage) throws IOException {
 
         boolean isExit = false;
-        String rightString = null;
+        String rightString = "";
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -48,7 +48,7 @@ public class InputVerification {
 
             while (!stringIsCorrect) {
                 if (!string.matches(ConstantStrings.SOME_WORDS_WITH_ONE_SPACE_REGEX)) {
-                    System.out.println(ConstantStrings.WRON_SOME_WORDS_INPUT_MESSAGE);
+                    System.out.println(ConstantStrings.WRONG_SOME_WORDS_INPUT_MESSAGE);
                     System.out.println(preInputMessage);
                     string = reader.readLine();
                 } else {

@@ -109,9 +109,11 @@ public class MenuOperations {
                 "1. Просмотреть список авиакомпаний" + "\n" +
                         "2. Зарегистрировать авиакомпанию" + "\n" +
                         "3. Зарегестрировать самолет" + "\n" +
-                        ConstantStrings.BACK
+                        "4. Вывести общую вместимость и грузоподъемность авиакомпании (указанной вами)" + "\n" +
+                        "5. Вывести самолеты авиакомпании (указанной вами) отсортированные по дальности полета" + "\n" +
+                        "6. Найти в авиакомпании самолеты в заданном диапазоне значний потребления топлива" + "\n" +
+                        ConstantStrings.BACK + "\n" + ConstantStrings.MENU_DELIMITER
         );
-        System.out.println(ConstantStrings.MENU_DELIMITER);
     }
 
     private static void showSecondClientScreen() {
@@ -138,16 +140,22 @@ public class MenuOperations {
     }
 
     private static void showTotalCapacityAndCarryingCapacity() throws IOException {
+        if (AirlineManagementTool.airlinesIsEmptyWithMessage()) {
+            return;
+        }
         Airline foundAirline = AirlineManagementTool.findAirlineByInputName();
         if (foundAirline != null) {
-            System.out.println(ConstantStrings.MENU_DELIMITER +
-                    "Общая вместимость = " + foundAirline.getTotalCapacity() +
-                    "\nОбщая грузоподъемность = " + foundAirline.getTotalCarryingCapacity() +
+            System.out.println(ConstantStrings.MENU_DELIMITER + "\n" +
+                    "Общая вместимость = " + foundAirline.getTotalCapacity() + "\n" +
+                    "Общая грузоподъемность = " + foundAirline.getTotalCarryingCapacity() + "\n" +
                     ConstantStrings.MENU_DELIMITER);
         }
     }
 
     private static void showSortedByFlightRangeAirplanes() throws IOException {
+        if (AirlineManagementTool.airlinesIsEmptyWithMessage()) {
+            return;
+        }
         Airline foundAirline = AirlineManagementTool.findAirlineByInputName();
         if (foundAirline != null) {
             ArrayList<Airplane> airplanes = foundAirline.getAirplanes();
@@ -159,9 +167,16 @@ public class MenuOperations {
     }
 
     private static void showAirplanesRange() throws IOException {
+        if (AirlineManagementTool.airlinesIsEmptyWithMessage()) {
+            return;
+        }
+
         Airline foundAirline = AirlineManagementTool.findAirlineByInputName();
+
         if (foundAirline != null) {
+            System.out.println(ConstantStrings.MENU_DELIMITER + "\nВведите начало диапазона: ");
             int from = InputVerification.inputNumber();
+            System.out.println(ConstantStrings.MENU_DELIMITER + "\nВведите конец диапазона: ");
             int to = InputVerification.inputNumber();
             AirlineManagementTool.findAirplaneByFuelConsumption(from, to, foundAirline);
         }

@@ -26,7 +26,7 @@ public class AirlineManagementTool {
     }
 
     // проверка на пустоту списка авиакомпаний
-    public static boolean airlinesIsEmpty() {
+    public static boolean airlinesIsEmptyWithMessage() {
         if (AirlineManagementTool.getAirlines().isEmpty()) {
             System.out.println("Зарегистрируйте хотя бы одну авиакомпанию!");
             return true;
@@ -46,7 +46,7 @@ public class AirlineManagementTool {
             }
         }
 
-        System.out.println("Такая авиакомпания не зарегистрированна." + ConstantStrings.MENU_DELIMITER);
+        System.out.println("Такая авиакомпания не зарегистрированна.");
         return null;
     }
 
@@ -58,6 +58,7 @@ public class AirlineManagementTool {
     }
 
     public static void registerAirline() throws IOException {
+
         String name = InputVerification.checkInputString("Введите название авиакомпании: ");
         int foundationYear = InputVerification.checkInputYear();
         String codeICAO = InputVerification.checkInputString("Введите код ICAO: ");
@@ -174,8 +175,7 @@ public class AirlineManagementTool {
     // Сортировка самолетов по дальности полета
     public static List<Airplane> sortAirplanesByFlightRange(List<Airplane> airplanes){
         if (airplanes.isEmpty()) {
-            System.out.println(ConstantStrings.NO_AIRPLANE_MESSAGE);
-            return null;
+            return airplanes;
         }
         else {
             airplanes.sort(compareByFlightRange);

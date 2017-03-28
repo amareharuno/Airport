@@ -14,11 +14,14 @@ public class AirplaneManagementTool {
     // Регистрация самолета (данные вводятся пользователем)
    public static void registerAirplane() throws IOException {
         boolean isExit = false;
-
+        if (AirlineManagementTool.airlinesIsEmptyWithMessage()) {
+            return;
+        }
+       System.out.println("Выберите тип самолета: " +
+               "1. Грузовой" + "\n" +
+               "2. Пассажирский" + "\n" +
+               "0. Назад");
         while (!isExit) {
-            if (AirlineManagementTool.airlinesIsEmpty()) {
-                return;
-            }
             switch (InputVerification.inputNumber()) {
                 case 1: // Грузовой самолет
                     registerCargoAirplane();
@@ -52,7 +55,7 @@ public class AirplaneManagementTool {
                 fuelConsumption, flightRange, maxSpeed);
 
         AirlineManagementTool.chooseAirlineAndAddAirplaneToIt(cargoAirplane);
-        System.out.println("Самолет зарегистрирован" + ConstantStrings.MENU_DELIMITER);
+        System.out.println("Самолет зарегистрирован\n" + ConstantStrings.MENU_DELIMITER);
     }
 
     // Регистрация пассажирского самолета
