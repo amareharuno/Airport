@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE airlines SYSTEM "Scheema.xsd">
+
+<airlines>
+	<airline code = "BRU">
+		<name>Airline 1</name>
+		<year>2003</year>
+		<address>address</address>
+	</airline>
+	
+	<airline code = "TLS">
+		<name>Airline 2</name>
+		<year>2002</year>
+		<address>address 2</address>
+	</airline>
+</airlines>
