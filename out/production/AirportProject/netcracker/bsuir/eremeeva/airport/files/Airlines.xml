@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tns:airlines xmlns:tns="http://www.example.com/Airlines">
+	<airline code = "BRU">
+		<name>Airline 1</name>
+		<year>2003</year>
+		<address>address</address>
+	</airline>
+	
+	<airline code = "TLS">
+		<name>Airline 2</name>
+		<year>2002</year>
+		<address>address 2</address>
+	</airline>
+</tns:airlines>
