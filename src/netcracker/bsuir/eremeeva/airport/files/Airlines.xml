@@ -1,7 +1,6 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
-<!DOCTYPE airlines SYSTEM "Scheema.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
 
-<airlines>
+<tns:airlines xmlns:tns="http://www.example.com/Airlines">
 	<airline code = "BRU">
 		<name>Airline 1</name>
 		<year>2003</year>
@@ -13,4 +12,4 @@
 		<year>2002</year>
 		<address>address 2</address>
 	</airline>
-</airlines>
+</tns:airlines>

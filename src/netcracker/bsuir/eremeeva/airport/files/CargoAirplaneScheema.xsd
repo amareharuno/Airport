@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.example.com/CargoAirplane"
+		xmlns:ns="http://www.example.com/CargoAirplane">
+
+	<element name = "cargos">
+		<complexType>
+			<sequence>
+				<element name = "cargo" type = "ns:Cargo" minOccurs = "1" maxOccurs = "unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+
+
+	<complexType name = "Cargo">
+		<sequence>
+			<element name = "name" type="string"/>
+			<element name = "capacity" type="integer"/>
+			<element name = "carrying_capacity" type = "integer"/>
+			<element name = "fuel_consumption" type="integer"/>
+			<element name = "flight_range" type="integer"/>
+			<element name = "max_speed" type="integer"/>
+		</sequence>
+	</complexType>
+		
+</schema>

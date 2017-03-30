@@ -18,7 +18,12 @@ public class AirlineHandler implements ContentHandler {
 
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("Parsing started");
+        // System.out.println("Parsing started..");
+    }
+
+    @Override
+    public void endDocument() throws SAXException {
+        // System.out.println("Parsing done!\n");
     }
 
     @Override
@@ -27,9 +32,11 @@ public class AirlineHandler implements ContentHandler {
             current = new Airline();
             // String name, int foundationYear, String codeICAO, String address
             current.setCodeICAO(atts.getValue(0));
+            // System.out.println("new airline created");
         }
-        if (!"name".equals(qName) && !"year".equals(qName) && !"address".equals(qName)){
+        if (!"tns:airlines".equals(qName) && !"airline".equals(qName)) {
             currentEnum = AirlineParamEnum.valueOf(qName.toUpperCase());
+            // System.out.println("Current enum: " + currentEnum);
         }
     }
 
@@ -37,34 +44,28 @@ public class AirlineHandler implements ContentHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (qName.equals("airline")) {
             airlines.add(current);
-            currentEnum = null;
         }
+        currentEnum = null;
     }
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         String string = new String(ch, start, length).trim();
-        if (currentEnum == null) {
-            switch (currentEnum) {
-                case NAME:
-                    current.setName(string);
-                    break;
-                case ADRESS:
-                    current.setAddress(string);
-                    break;
-                case YEAR:
-                    current.setFoundationYear(Integer.parseInt(string));
-                    break;
-            }
+        if (currentEnum == null) { return; }
+        switch (currentEnum) {
+            case NAME:
+                current.setName(string);
+                break;
+            case ADDRESS:
+                current.setAddress(string);
+                break;
+            case YEAR:
+                current.setFoundationYear(Integer.parseInt(string.trim()));
+                break;
         }
     }
 
     // -------------------------------------------------------------------
-
-    @Override
-    public void endDocument() throws SAXException {
-
-    }
 
     @Override
     public void startPrefixMapping(String prefix, String uri) throws SAXException {

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<schema>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.example.com/Airlines"
+		xmlns:tns="http://www.example.com/Airlines">
 
 	<element name = "airlines">
-		<complexType name = "Airlines">
+		<complexType>
 			<sequence>
-				<element name = "airline" type = "tns: Airline" minOccurs = "1" maxOccurs = "unbounded"/>
+				<element name = "airline" type = "tns:Airline" minOccurs = "1" maxOccurs = "unbounded"/>
 			</sequence>
 		</complexType>
 	</element>
-	
-	
+
+
 	<complexType name = "Airline">
 		<sequence>
 			<element name = "name" type="string"/>

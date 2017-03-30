@@ -17,7 +17,7 @@ public class AirplaneManagementTool {
         if (AirlineManagementTool.airlinesIsEmptyWithMessage()) {
             return;
         }
-       System.out.println("Выберите тип самолета: " +
+       System.out.println("Выберите тип самолета: \n" +
                "1. Грузовой" + "\n" +
                "2. Пассажирский" + "\n" +
                "0. Назад");

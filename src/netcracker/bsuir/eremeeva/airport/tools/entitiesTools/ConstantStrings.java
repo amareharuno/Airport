@@ -15,6 +15,7 @@ public class ConstantStrings {
     public static final String IS_EXIT = "Работа завершена. Хорошего дня :)";
     public static final String SELECT_OPERATION = "Выберите действие:";
     public static final String BACK = "0. Назад";
+    public static final String NO_INIT_DATA = "Исходных данных нет\n";
 
     // Regex
     public static final String SOME_WORDS_WITH_ONE_SPACE_REGEX = "\\s*(\\w+\\s??)+\\s*";

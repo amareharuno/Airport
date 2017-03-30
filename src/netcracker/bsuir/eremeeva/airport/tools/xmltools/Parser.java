@@ -17,6 +17,9 @@ public class Parser {
         reader.parse(pathToFile);
 
         ArrayList<Airline> airlines = airlineHandler.getAirlines();
+        /*for (Airline airline : airlines) {
+            System.out.println(airline);
+        }*/
         AirlineManagementTool.setAirlines(airlines);
     }
 }
